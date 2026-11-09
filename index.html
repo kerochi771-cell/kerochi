@@ -2,75 +2,40 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>My First Website</title>
+    <title>Kerochi Website</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #101827;
-            color: white;
-            min-height: 100vh;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .container {
-            padding: 30px;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        p {
-            color: #b8c3d6;
-            line-height: 1.7;
-        }
-
-        button {
-            padding: 13px 25px;
-            border: none;
-            border-radius: 8px;
-            background: #3b82f6;
-            color: white;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #2563eb;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-    <div class="container">
+    <main class="container">
 
-        <h1>Welcome to My Website</h1>
+        <div>
 
-        <p>
-            My First Cloud Deployment Project.
-        </p>
+            <h1>Welcome to Kerochi</h1>
 
-        <button onclick="alert('Website is working!')">
-            Test Website
-        </button>
+            <p>
+                My First Professional Website.
+                Built with HTML, CSS and JavaScript.
+            </p>
 
-    </div>
+            <button onclick="testWebsite()">
+                Test Website
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
 
 </body>
 
