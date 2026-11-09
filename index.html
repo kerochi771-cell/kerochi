@@ -4,23 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Birthday Zin Wai Aung 🎂</title>
+<title>Happy 12th Birthday | Zin Wai Aung</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#080b16">
+<meta name="description" content="A special birthday celebration for Zin Wai Aung.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+:root {
+    --bg: #080b16;
+    --surface: #101525;
+    --surface2: #171e30;
+    --gold: #d8bd83;
+    --white: #f5f4f0;
+    --muted: #a2a7b6;
+    --border: rgba(255,255,255,.1);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --pink: #ffb6d5;
-    --blue: #a8dfff;
-    --purple: #c9b6ff;
-    --white: #ffffff;
-    --text: #665879;
 }
 
 html {
@@ -28,321 +41,724 @@ html {
 }
 
 body {
+    background: var(--bg);
+    color: var(--white);
     font-family: 'Kantumruy Pro', sans-serif;
-    background: linear-gradient(135deg,#e9f7ff,#ffeaf4,#f0eaff);
-    color: var(--text);
     overflow-x: hidden;
 }
 
 button {
     font-family: inherit;
-    cursor: pointer;
-    border: none;
 }
 
-section {
-    padding: 80px 20px;
-    text-align: center;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-h1,h2,h3 {
-    font-family: 'Kantumruy Pro', sans-serif;
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
 }
 
-.title {
-    font-size: clamp(25px,5vw,38px);
+.english {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.section {
+    padding: 110px 0;
+}
+
+.section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
     margin-bottom: 18px;
-    color: #a16dbb;
 }
 
-.subtitle {
+.section-title {
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.section-desc {
+    color: var(--muted);
+    line-height: 2;
     font-size: 15px;
-    margin-bottom: 30px;
 }
 
-/* INTRO */
+/* =========================
+   BACKGROUND
+========================= */
+
+.background-glow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .12;
+}
+
+.glow.one {
+    background: #526bbd;
+    top: -150px;
+    left: -150px;
+}
+
+.glow.two {
+    background: #d8bd83;
+    bottom: -150px;
+    right: -150px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 10;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-date {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
-    padding: 25px;
     overflow: hidden;
+    background:
+        linear-gradient(90deg, #080b16 5%, rgba(8,11,22,.85) 50%, rgba(8,11,22,.55)),
+        url('images/cover.jpg') center/cover no-repeat;
 }
 
-.hero-card {
-    width: 100%;
-    max-width: 600px;
-    background: #ffffffc9;
-    backdrop-filter: blur(15px);
-    border: 2px solid white;
-    border-radius: 35px;
-    padding: 45px 25px;
-    box-shadow: 0 15px 50px #d8b5e855;
+.hero-content {
+    max-width: 760px;
+    padding: 150px 0 100px;
     position: relative;
     z-index: 2;
 }
 
-.hero-icon {
-    font-size: 75px;
-    animation: bounce 2s infinite;
+.hero-small {
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
-    color: #c16fa9;
-    font-size: clamp(26px,6vw,43px);
-    margin: 20px 0 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(55px, 11vw, 105px);
+    line-height: .95;
+    letter-spacing: -5px;
+    font-weight: 800;
 }
 
-.hero p {
-    line-height: 2;
-    font-size: 16px;
+.hero h1 span {
+    color: var(--gold);
 }
 
-.main-btn {
-    margin-top: 28px;
-    padding: 15px 30px;
-    border-radius: 50px;
-    color: white;
-    background: linear-gradient(90deg,#ff9ec8,#a58bff);
-    font-size: 16px;
-    font-weight: 700;
-    box-shadow: 0 7px 20px #d7a3e866;
+.hero-name {
+    font-size: clamp(28px, 5vw, 43px);
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.hero-desc {
+    margin-top: 20px;
+    max-width: 500px;
+    color: #c1c4ce;
+    line-height: 2.1;
+    font-size: 15px;
+}
+
+.hero-actions {
+    margin-top: 38px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 28px;
+    border-radius: 3px;
+    font-size: 13px;
+    letter-spacing: .5px;
+    font-weight: 600;
+    cursor: pointer;
     transition: .3s;
 }
 
-.main-btn:hover {
-    transform: translateY(-5px) scale(1.04);
+.btn-primary {
+    background: var(--gold);
+    color: #111522;
+    border: 1px solid var(--gold);
 }
 
-/* FLOATING ELEMENTS */
-
-.floating {
-    position: absolute;
-    font-size: 30px;
-    animation: float 5s ease-in-out infinite;
-    pointer-events: none;
+.btn-primary:hover {
+    background: transparent;
+    color: var(--gold);
 }
 
-@keyframes float {
-    0%,100% { transform: translateY(0) rotate(0); }
-    50% { transform: translateY(-35px) rotate(15deg); }
-}
-
-@keyframes bounce {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-/* SURPRISE */
-
-#surprise {
-    display: none;
-}
-
-.gift {
-    font-size: 110px;
-    cursor: pointer;
-    display: inline-block;
-    animation: bounce 2s infinite;
-    transition: .4s;
-}
-
-.gift:hover {
-    transform: scale(1.2) rotate(10deg);
-}
-
-.gift-message {
-    display: none;
-    margin: 25px auto;
-    max-width: 500px;
-    background: white;
-    padding: 30px;
-    border-radius: 25px;
-    line-height: 2;
-    box-shadow: 0 10px 30px #d9b9e855;
-    animation: appear .7s ease;
-}
-
-/* CAKE */
-
-.cake-area {
-    background: #ffffff80;
-    border-radius: 30px;
-    max-width: 500px;
-    margin: auto;
-    padding: 35px 15px;
-}
-
-.cake {
-    font-size: 110px;
-    margin: 20px;
-}
-
-.candle {
-    font-size: 30px;
-    display: inline-block;
-    margin-bottom: -10px;
-    transition: .4s;
-}
-
-.candle.off {
-    opacity: .3;
-    transform: scale(.7);
-}
-
-.cake-message {
-    margin-top: 20px;
-    font-size: 17px;
-    line-height: 2;
-}
-
-/* GALLERY */
-
-.upload-btn {
-    display: inline-block;
-    background: linear-gradient(90deg,#ffadd0,#b5a0ff);
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.3);
     color: white;
-    padding: 13px 25px;
-    border-radius: 30px;
-    margin: 15px;
-    cursor: pointer;
-    font-weight: bold;
+    background: transparent;
 }
 
-#photoInput {
-    display: none;
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+}
+
+.hero-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 720px;
+    margin: auto;
+}
+
+.intro-number {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(100px, 20vw, 190px);
+    font-weight: 800;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(216,189,131,.55);
+    margin: 35px 0;
+}
+
+.intro-message {
+    color: #c4c7d0;
+    line-height: 2.2;
+    font-size: 16px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background: #0d1120;
+}
+
+.gallery-header {
+    margin-bottom: 45px;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 220px;
     gap: 15px;
-    max-width: 850px;
-    margin: 30px auto;
 }
 
-.photo {
-    height: 190px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 4px solid white;
-    box-shadow: 0 5px 15px #bba4cc55;
-    transition: .3s;
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
     cursor: pointer;
 }
 
-.photo:hover {
-    transform: scale(1.04);
+.gallery-item:nth-child(1) {
+    grid-column: span 7;
+    grid-row: span 2;
 }
 
-/* LETTER */
-
-.letter {
-    max-width: 650px;
-    margin: auto;
-    background: #ffffffd9;
-    padding: 40px 25px;
-    border-radius: 30px;
-    border: 2px dashed #e9a9d0;
-    box-shadow: 0 10px 35px #d9b5e855;
+.gallery-item:nth-child(2) {
+    grid-column: span 5;
 }
 
-.letter p {
-    line-height: 2.3;
-    font-size: 17px;
-    margin-top: 15px;
+.gallery-item:nth-child(3) {
+    grid-column: span 5;
 }
 
-/* MUSIC */
-
-.music-btn {
-    position: fixed;
-    right: 18px;
-    bottom: 20px;
-    z-index: 20;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background: linear-gradient(135deg,#ff9ec8,#9d8aff);
-    color: white;
-    font-size: 22px;
-    box-shadow: 0 5px 20px #0002;
+.gallery-item:nth-child(4) {
+    grid-column: span 4;
 }
 
-#musicInput {
-    display: none;
+.gallery-item:nth-child(5) {
+    grid-column: span 4;
 }
 
-/* FOOTER */
+.gallery-item:nth-child(6) {
+    grid-column: span 4;
+}
 
-footer {
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item::after {
+    content: "VIEW MEMORY";
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: .3s;
+    z-index: 2;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, #0009);
+    opacity: 0;
+    transition: .3s;
+    z-index: 1;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+/* =========================
+   WISH SECTION
+========================= */
+
+.wish {
     text-align: center;
-    padding: 35px 15px;
-    background: #ffffff80;
+}
+
+.wish-box {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 65px 35px;
+    border: 1px solid rgba(216,189,131,.3);
+    background: linear-gradient(135deg,#151c30,#0c1120);
+    position: relative;
+}
+
+.wish-box::before {
+    content: "✦";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg);
+    color: var(--gold);
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+.wish-box h3 {
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.wish-box p {
+    color: #c5c8d0;
+    line-height: 2.4;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.signature {
+    color: var(--gold) !important;
+    margin-top: 30px;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-section {
+    background: #0d1120;
+    text-align: center;
+}
+
+.cake-wrapper {
+    margin: 55px auto 30px;
+    width: 220px;
+    position: relative;
+    height: 230px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.cake {
+    position: relative;
+    width: 180px;
+    height: 100px;
+    background: linear-gradient(135deg,#e6c58b,#b78d54);
+    border-radius: 12px 12px 5px 5px;
+    box-shadow: 0 15px 35px #0005;
+}
+
+.cake::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #f4dfbb;
+    border-radius: 50%;
+}
+
+.cake::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: #f4dfbb;
+    border-radius: 50%;
+}
+
+.candle {
+    position: absolute;
+    width: 9px;
+    height: 42px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fff,
+        #fff 5px,
+        #d8bd83 5px,
+        #d8bd83 9px
+    );
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.flame {
+    position: absolute;
+    width: 15px;
+    height: 22px;
+    background: #ffbf52;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    top: -22px;
+    left: -3px;
+    box-shadow: 0 0 25px #ffb347;
+    animation: flicker .6s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: rotate(-45deg) scale(.9); }
+    to { transform: rotate(-45deg) scale(1.1); }
+}
+
+.cake-text {
+    color: var(--muted);
     line-height: 2;
 }
 
-.hidden {
-    display: none !important;
+.blow-btn {
+    margin-top: 25px;
 }
 
-/* CONFETTI */
+/* =========================
+   FINAL
+========================= */
 
-.confetti {
+.final-section {
+    text-align: center;
+    padding: 140px 20px;
+}
+
+.final-section h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(35px,7vw,65px);
+    font-weight: 800;
+    margin: 25px 0;
+}
+
+.final-section h2 span {
+    color: var(--gold);
+}
+
+.final-date {
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 35px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-control {
     position: fixed;
-    top: -20px;
-    width: 10px;
-    height: 15px;
-    z-index: 999;
-    pointer-events: none;
-    animation: fall 3s linear forwards;
+    bottom: 25px;
+    right: 25px;
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(216,189,131,.5);
+    background: #151b2c;
+    color: var(--gold);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 50;
+    font-size: 19px;
 }
 
-@keyframes fall {
-    to {
-        transform: translateY(110vh) rotate(720deg);
-        opacity: 0;
+.music-control.playing {
+    animation: musicPulse 2s infinite;
+}
+
+@keyframes musicPulse {
+    50% {
+        box-shadow: 0 0 0 10px rgba(216,189,131,.08);
     }
 }
 
-/* LIGHTBOX */
+/* =========================
+   WELCOME OVERLAY
+========================= */
 
-#lightbox {
-    display: none;
+.welcome-overlay {
     position: fixed;
     inset: 0;
+    background: #080b16;
     z-index: 1000;
-    background: #000c;
+    display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 25px;
+    transition: opacity .8s, visibility .8s;
+}
+
+.welcome-overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.welcome-content {
+    max-width: 500px;
+}
+
+.welcome-content .line {
+    width: 50px;
+    height: 1px;
+    background: var(--gold);
+    margin: 25px auto;
+}
+
+.welcome-content h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.welcome-content p {
+    color: var(--muted);
+    line-height: 2;
+}
+
+.welcome-btn {
+    margin-top: 30px;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: #000e;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
-#lightbox img {
-    max-width: 95%;
-    max-height: 85vh;
-    border-radius: 15px;
+.lightbox.active {
+    display: flex;
 }
 
-@media(max-width:600px) {
-    section {
-        padding: 60px 15px;
+.lightbox img {
+    max-width: 95%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: white;
+    background: transparent;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s, transform .8s;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width:700px) {
+
+    .hero {
+        background-position: 60% center;
     }
 
-    .hero-card {
-        padding: 35px 20px;
+    .hero h1 {
+        letter-spacing: -3px;
     }
 
-    .photo {
-        height: 150px;
+    .hero-bottom-inner {
+        font-size: 9px;
     }
 
-    .letter {
-        padding: 30px 18px;
+    .gallery {
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 180px;
+    }
+
+    .gallery-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .gallery-item:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .wish-box {
+        padding: 55px 20px;
+    }
+
+    .wish-box p {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
@@ -351,426 +767,213 @@ footer {
 
 <body>
 
-<!-- FLOATING DECORATIONS -->
+<div class="background-glow">
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+</div>
 
-<div class="floating" style="top:10%;left:8%">💗</div>
-<div class="floating" style="top:25%;right:8%">⭐</div>
-<div class="floating" style="top:65%;left:5%">🎈</div>
-<div class="floating" style="top:80%;right:10%">🧸</div>
+<!-- WELCOME -->
+
+<div class="welcome-overlay" id="welcome">
+
+    <div class="welcome-content">
+
+        <div class="section-label">A SPECIAL CELEBRATION</div>
+
+        <div class="line"></div>
+
+        <h2>For You.</h2>
+
+        <p>
+            ညီလေးအတွက် အထူးပြင်ဆင်ထားတဲ့<br>
+            မွေးနေ့အမှတ်တရလေးတစ်ခုပါ။
+        </p>
+
+        <button class="btn btn-primary welcome-btn"
+                onclick="enterWebsite()">
+            ENTER EXPERIENCE →
+        </button>
+
+        <div class="line"></div>
+
+        <p class="english" style="font-size:11px;letter-spacing:2px">
+            NOVEMBER 11, 2026
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+    <div class="container nav-inner">
+
+        <div class="logo">
+            ZWA<span>.</span>
+        </div>
+
+        <div class="nav-date">
+            11 · 11 · 2026
+        </div>
+
+    </div>
+
+</nav>
+
 
 <!-- HERO -->
 
-<section class="hero">
+<header class="hero">
 
-<div class="hero-card">
+    <div class="container">
 
-<div class="hero-icon">🎂</div>
+        <div class="hero-content reveal">
 
-<p>✨ A SPECIAL DAY FOR YOU ✨</p>
+            <div class="hero-small">
+                A DAY TO REMEMBER
+            </div>
 
-<h1>Happy Birthday!</h1>
+            <h1>
+                HAPPY<br>
+                <span>12TH</span><br>
+                BIRTHDAY.
+            </h1>
 
-<h2 style="color:#8e80c9;font-size:28px">
-ညီလေးဇင်ဝေအောင်
-</h2>
+            <div class="hero-name">
+                ညီလေးဇင်ဝေအောင်
+            </div>
 
-<p>
-၁၂ နှစ်ပြည့် မွေးနေ့လေးမှစပြီး<br>
-ပျော်ရွှင်မှုတွေနဲ့ ပြည့်စုံပါစေ။ 💗
-</p>
+            <p class="hero-desc">
+                ဒီနေ့လေးက ညီလေးအတွက်
+                အမှတ်တရအဖြစ်ဆုံးနေ့လေးတစ်နေ့
+                ဖြစ်ပါစေ။ ပျော်ရွှင်မှုတွေနဲ့
+                အမြဲပြည့်နှက်နေပါစေ။
+            </p>
 
-<button class="main-btn" onclick="startSurprise()">
-🎁 Surprise ဖွင့်ကြည့်မယ်
-</button>
+            <div class="hero-actions">
 
-</div>
-</section>
+                <a href="#memories" class="btn btn-primary">
+                    EXPLORE MEMORIES
+                </a>
 
+                <a href="#letter" class="btn btn-outline">
+                    READ YOUR LETTER
+                </a>
 
-<!-- SURPRISE -->
+            </div>
 
-<section id="surprise">
+        </div>
 
-<h2 class="title">🎁 ညီလေးအတွက် လက်ဆောင်လေး</h2>
+    </div>
 
-<p class="subtitle">
-ဒီလက်ဆောင်လေးကို နှိပ်ကြည့်ပါနော် 💗
-</p>
+    <div class="hero-bottom">
 
-<div class="gift" onclick="openGift()">🎁</div>
+        <div class="container hero-bottom-inner">
 
-<div class="gift-message" id="giftMessage">
+            <span>MADE WITH LOVE</span>
 
-<h2>🎉 Surprise! 🎉</h2>
+            <span>SCROLL TO EXPLORE ↓</span>
 
-<p>
-ဒီနေ့လေးမှာ ပျော်ရွှင်မှုတွေ<br>
-အများကြီး ရရှိပါစေနော်။ ❤️
-</p>
+        </div>
 
-<div style="font-size:45px;margin-top:15px">
-🎈 🧸 💖 🌟
-</div>
+    </div>
 
-</div>
-
-</section>
+</header>
 
 
-<!-- CAKE -->
+<!-- INTRO -->
 
-<section>
+<section class="section intro">
 
-<h2 class="title">🎂 မွေးနေ့ကိတ်လေး</h2>
+    <div class="container intro-content reveal">
 
-<div class="cake-area">
+        <div class="section-label">
+            CHAPTER 01 · NEW BEGINNING
+        </div>
 
-<div class="candle" id="candle">🔥</div>
+        <h2 class="section-title">
+            Another Year.<br>
+            <span class="gold">Another Beautiful Journey.</span>
+        </h2>
 
-<div class="cake">🎂</div>
+        <div class="intro-number">12</div>
 
-<p class="cake-message">
-ဆုတောင်းလေးတစ်ခုတောင်းပြီး<br>
-ဖယောင်းတိုင်လေး မှုတ်လိုက်ပါနော်။
-</p>
+        <p class="intro-message">
+            အသက် ၁၂ နှစ်ပြည့်တဲ့ ဒီနေ့လေးကနေစပြီး
+            ညီလေးရဲ့ ဘဝခရီးလမ်းမှာ
+            ကောင်းမွန်တဲ့ အခွင့်အရေးတွေ၊
+            ပျော်ရွှင်စရာ အမှတ်တရတွေ
+            အများကြီး ပိုင်ဆိုင်နိုင်ပါစေ။
+        </p>
 
-<button class="main-btn" onclick="blowCandle()">
-🕯️ ဖယောင်းတိုင်မှုတ်မယ်
-</button>
-
-<p id="blowMessage" style="margin-top:20px"></p>
-
-</div>
+    </div>
 
 </section>
 
 
 <!-- GALLERY -->
 
-<section>
-
-<h2 class="title">📸 အမှတ်တရ ဓာတ်ပုံများ</h2>
-
-<p class="subtitle">
-ချစ်စရာကောင်းတဲ့ အမှတ်တရလေးတွေ 💗
-</p>
-
-<label for="photoInput" class="upload-btn">
-📷 ဓာတ်ပုံထည့်မယ်
-</label>
-
-<input
-type="file"
-id="photoInput"
-accept="image/*"
-multiple
->
-
-<div class="gallery" id="gallery">
-
-<div style="grid-column:1/-1;padding:25px">
-🌸 ဓာတ်ပုံလေးတွေ ဒီနေရာမှာ ထည့်နိုင်ပါတယ်။
-</div>
-
-</div>
-
-</section>
-
-
-<!-- LETTER -->
-
-<section>
-
-<h2 class="title">💌 ညီလေးအတွက် စာလေး</h2>
-
-<div class="letter">
-
-<div style="font-size:45px">💗</div>
-
-<h2 style="color:#d47eaf;margin-top:15px">
-Happy 12th Birthday!
-</h2>
-
-<p>
-ပျော်ရွှင်စရာ ၁၂ နှစ်ပြည့် မွေးနေ့လေး
-ဖြစ်ပါစေ ညီလေးဇင်ဝေအောင်ရေ။ ❤️
-</p>
-
-<p>
-ဒီနေ့လေးက ညီလေးအတွက်
-အထူးခြားဆုံးနေ့လေး ဖြစ်ပါစေ။
-အမြဲတမ်း ပျော်ရွှင်ကျန်းမာပြီး
-ညီလေးရဲ့ အိပ်မက်လေးတွေ
-တစ်ခုချင်းစီ ပြည့်ဝလာပါစေ။
-</p>
-
-<p>
-မိဘကို လုပ်ကျွေးနိုင်တဲ့
-သားကောင်းရတနာလေး ဖြစ်ပါစေ။ ❤️
-</p>
-
-<div style="font-size:40px;margin-top:20px">
-🌷 💗 🌷
-</div>
-
-<p style="color:#bd83bd;font-weight:bold">
-With Love & Best Wishes
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FINAL -->
-
-<section>
-
-<h2 class="title">🌟 ဒီနေ့လေးက အမှတ်တရပါ</h2>
-
-<div style="font-size:80px;animation:bounce 2s infinite">
-🎈🎂🎈
-</div>
-
-<h2 style="color:#bd78af;margin-top:20px">
-ပျော်ရွှင်ပါစေ ညီလေးရေ ❤️
-</h2>
-
-<p style="margin-top:15px;line-height:2">
-11.11.2026<br>
-A Day To Remember 💗
-</p>
-
-<button class="main-btn" onclick="celebrate()">
-🎉 ထပ်ပြီး Celebrate လုပ်မယ်
-</button>
-
-</section>
-
-
-<!-- MUSIC -->
-
-<button class="music-btn" onclick="toggleMusic()" id="musicBtn">
-🎵
-</button>
-
-<label for="musicInput"
-style="position:fixed;right:15px;bottom:85px;z-index:20;background:white;padding:10px 15px;border-radius:25px;font-size:12px;box-shadow:0 3px 12px #0002;cursor:pointer">
-🎼 သီချင်းထည့်ရန်
-</label>
-
-<input type="file" id="musicInput" accept="audio/*">
-
-<audio id="audio" loop></audio>
-
-
-<!-- LIGHTBOX -->
-
-<div id="lightbox" onclick="this.style.display='none'">
-<img id="largePhoto" src="" alt="Memory Photo">
-</div>
-
-
-<footer>
-
-<p>Made With ❤️ For</p>
-
-<h2 style="color:#c17cb1">
-ညီလေးဇင်ဝေအောင်
-</h2>
-
-<p>© 2026 Birthday Celebration 🎂</p>
-
-</footer>
-
-
-<script>
-
-// START SURPRISE
-
-function startSurprise() {
-
-    document.getElementById("surprise").style.display = "block";
-
-    document.getElementById("surprise").scrollIntoView({
-        behavior: "smooth"
-    });
-
-    celebrate();
-}
-
-
-// OPEN GIFT
-
-function openGift() {
-
-    const message = document.getElementById("giftMessage");
-
-    message.style.display = "block";
-
-    celebrate();
-
-}
-
-
-// BLOW CANDLE
-
-let candleBlown = false;
-
-function blowCandle() {
-
-    if(candleBlown) return;
-
-    candleBlown = true;
-
-    document.getElementById("candle").classList.add("off");
-
-    document.getElementById("candle").innerText = "✨";
-
-    document.getElementById("blowMessage").innerText =
-        "🎉 ဆုတောင်းလေးတွေ ပြည့်ပါစေနော်။ 💗";
-
-    celebrate();
-
-}
-
-
-// CONFETTI
-
-function celebrate() {
-
-    const emojis = ["🎉","💗","⭐","🎈","🌸","✨"];
-
-    for(let i = 0; i < 65; i++) {
-
-        const confetti = document.createElement("div");
-
-        confetti.className = "confetti";
-
-        confetti.innerText =
-            emojis[Math.floor(Math.random() * emojis.length)];
-
-        confetti.style.left = Math.random() * 100 + "vw";
-
-        confetti.style.animationDuration =
-            (2 + Math.random() * 3) + "s";
-
-        confetti.style.fontSize =
-            (12 + Math.random() * 20) + "px";
-
-        document.body.appendChild(confetti);
-
-        setTimeout(() => confetti.remove(), 5000);
-
-    }
-
-}
-
-
-// PHOTO UPLOAD
-
-document.getElementById("photoInput").addEventListener(
-"change", function(event) {
-
-    const gallery = document.getElementById("gallery");
-
-    if(gallery.children.length === 1 &&
-       !gallery.querySelector("img")) {
-
-        gallery.innerHTML = "";
-
-    }
-
-    const files = Array.from(event.target.files);
-
-    files.forEach(file => {
-
-        if(!file.type.startsWith("image/")) return;
-
-        const imageURL = URL.createObjectURL(file);
-
-        const img = document.createElement("img");
-
-        img.src = imageURL;
-
-        img.className = "photo";
-
-        img.alt = "Birthday Memory";
-
-        img.addEventListener("click", function() {
-
-            document.getElementById("largePhoto").src = imageURL;
-
-            document.getElementById("lightbox").style.display = "flex";
-
-        });
-
-        gallery.appendChild(img);
-
-    });
-
-});
-
-
-// MUSIC UPLOAD
-
-document.getElementById("musicInput").addEventListener(
-"change", function(event) {
-
-    const file = event.target.files[0];
-
-    if(!file) return;
-
-    const audio = document.getElementById("audio");
-
-    audio.src = URL.createObjectURL(file);
-
-    audio.play().then(() => {
-
-        document.getElementById("musicBtn").innerText = "⏸️";
-
-    }).catch(() => {
-
-        alert("သီချင်းဖွင့်မရပါ။ ထပ်မံစမ်းကြည့်ပါ။");
-
-    });
-
-});
-
-
-// MUSIC PLAY / PAUSE
-
-function toggleMusic() {
-
-    const audio = document.getElementById("audio");
-
-    const btn = document.getElementById("musicBtn");
-
-    if(!audio.src) {
-
-        alert("အရင်ဆုံး သီချင်းတစ်ပုဒ် ထည့်ပေးပါနော်။");
-
-        return;
-
-    }
-
-    if(audio.paused) {
-
-        audio.play();
-
-        btn.innerText = "⏸️";
-
-    } else {
-
-        audio.pause();
-
-        btn.innerText = "🎵";
-
-    }
-
-}
-
-</script>
-
-</body>
-</html>
+<section class="section gallery-section" id="memories">
+
+    <div class="container">
+
+        <div class="gallery-header reveal">
+
+            <div class="section-label">
+                CHAPTER 02 · MEMORIES
+            </div>
+
+            <h2 class="section-title">
+                Moments That <span class="gold">Matter.</span>
+            </h2>
+
+            <p class="section-desc">
+                အချိန်တွေ ဘယ်လောက်ပြောင်းလဲသွားပါစေ<br>
+                အမှတ်တရကောင်းလေးတွေကတော့ အမြဲကျန်ရှိနေမှာပါ။
+            </p>
+
+        </div>
+
+        <div class="gallery reveal">
+
+            <div class="gallery-item">
+                <img src="images/photo1.jpg"
+                     alt="Memory 1"
+                     loading="lazy"
+                     onclick="openPhoto(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo2.jpg"
+                     alt="Memory 2"
+                     loading="lazy"
+                     onclick="openPhoto(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo3.jpg"
+                     alt="Memory 3"
+                     loading="lazy"
+                     onclick="openPhoto(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo4.jpg"
+                     alt="Memory 4"
+                     loading="lazy"
+                     onclick="openPhoto(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo5.jpg"
+                     alt="Memory 5"
+                     loading="lazy"
+                     onclick="openPhoto(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/cover.jpg"
+                     alt="Memory
