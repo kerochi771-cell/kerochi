@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My First Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101827;
+            color: white;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            color: #b8c3d6;
+            line-height: 1.7;
+        }
+
+        button {
+            padding: 13px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #3b82f6;
+            color: white;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Welcome to My Website</h1>
+
+        <p>
+            My First Cloud Deployment Project.
+        </p>
+
+        <button onclick="alert('Website is working!')">
+            Test Website
+        </button>
+
+    </div>
+
+</body>
+
+</html>
